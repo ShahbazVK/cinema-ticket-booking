@@ -10,7 +10,7 @@ const routes = [
         component: HelloWorld,
     },
     {
-        path: '/booking',
+        path: '/movie/booking/:id',
         name: 'TheBooking',
         component: TheBooking,
     },
