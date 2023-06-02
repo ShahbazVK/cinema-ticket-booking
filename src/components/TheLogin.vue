@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="background-image: url('../assets/movies.jpg')">
   <div style="height: 85vh;" class="row align-items-center">
     <div class="col">
       hi
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="row justify-content-center">
-        <button type="button" class="btn btn-success col-2">Login</button>
+        <button @click="login" type="button" class="btn btn-success col-2">Login</button>
       </div>
       <div class="">
         <p class="text-center">Don't have an account? <button type="button" class="btn btn-link" style="margin-left: -15px;">Register Now!</button></p>
@@ -40,6 +40,9 @@ export default{
   methods:{
     register(){
       console.log("object");
+    },
+    login(){
+      this.$router.push('/movies')
     }
   }
 }

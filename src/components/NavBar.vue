@@ -2,7 +2,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="https://www.nueplex.com//assets/uploads/logo/black-logo.png" alt="" style="margin-left: 4rem;" width="100" class="d-inline-block align-text-top"/>
+                <img @click="this.$router.push('/')" src="https://www.nueplex.com//assets/uploads/logo/black-logo.png" alt="" style="margin-left: 4rem;" width="100" class="d-inline-block align-text-top"/>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
