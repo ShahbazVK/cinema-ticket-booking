@@ -36,16 +36,14 @@
 </template>
 
 <script>
-import {currentMoviesData} from '../assets/currentMoviesData'
-import {upcomingMoviesData} from '../assets/upcomingMoviesData'
 export default{
     components:{
         
     },
     data(){
         return{
-            currentMoviesData,
-            upcomingMoviesData,
+            currentMoviesData:[],
+            upcomingMoviesData:[],
         }
     },
     methods:{
@@ -63,6 +61,12 @@ export default{
                 behavior: "smooth"
             });
         }
+    },
+    async mounted(){
+        await this.$store.dispatch('setCurrentMoviesData')
+        await this.$store.dispatch('setUpcomingMoviesData')
+        this.currentMoviesData= await this.$store.getters.getCurrentMoviesData
+        this.upcomingMoviesData= await this.$store.getters.getUpcomingMoviesData
     }
 }
 </script>
